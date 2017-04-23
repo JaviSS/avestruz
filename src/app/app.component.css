@@ -130,6 +130,8 @@ li {
 .navbar {
   height: 40px;
   min-height: 20px;
+  background:var(--oscuro2);
+  border:none;
 
 }
 
