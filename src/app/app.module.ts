@@ -3,10 +3,12 @@ import {NgModule} from '@angular/core';
 import {AlertModule} from 'ngx-bootstrap';
 import {AppComponent} from './app.component';
 import {AngularFireModule} from 'angularfire2';
-import {LoginPageComponent} from './login-page/login-page.component';
-import {AngubaseService} from './providers/angubase.service';
-import { HomePageComponent } from './home-page/home-page.component';
+import {PaginaLoginComponente} from './pagina-login/pagina-login.component';
+import {FirebaseService} from './providers/firebase.service';
 import {RouterModule, Routes} from '@angular/router';
+import { ChatComponent } from './chat-app/chat.component';
+import {FormsModule} from "@angular/forms";
+import { NavbarAppComponent } from './navbar-app/navbar-app.component';
 
 
 export const firebaseConfig = {
@@ -19,16 +21,18 @@ export const firebaseConfig = {
 };
 
 const routes: Routes = [
-  {path: '', component: HomePageComponent},
-  {path: 'login', component: LoginPageComponent}
+  {path: '', component: ChatComponent},
+  {path: 'login', component: PaginaLoginComponente}
   ];
 
 
 @NgModule({
-  declarations: [AppComponent, LoginPageComponent, HomePageComponent],
-  imports: [AlertModule.forRoot(), BrowserModule, AngularFireModule.initializeApp(firebaseConfig),RouterModule.forRoot(routes)],
+  declarations: [AppComponent, PaginaLoginComponente, ChatComponent, NavbarAppComponent],
+  imports: [AlertModule.forRoot(), BrowserModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    RouterModule.forRoot(routes), FormsModule],
   bootstrap: [AppComponent],
-  providers: [AngubaseService]
+  providers: [FirebaseService]
 })
 export class AppModule {
 }

@@ -1,0 +1,29 @@
+<div class="appChat z-depth-5">
+  <div #scrollMensaje class="contenedorChat" id="mensajes">
+    <ul>
+      <li *ngFor="let mensaje of mensajes | async; let index = index" class="">
+        <div class="row">
+          <div class="col s3 m3 l3 columnaAutor">
+            <div class="row" [class.propioAutor]="!soyYo(mensaje.email)" [class.autor]="soyYo(mensaje.email)">
+              <div  wrap="hard">@{{ mensaje.displayName }}</div>
+            </div>
+            <div class="row horaMensaje">
+              {{ mensaje.timestamp | date:" HH:mm " }}
+            </div>
+          </div>
+          <div class="col s9 m9 l9 mensaje" [class.par]="index%2==1" [class.impar]="index%2==0">
+            {{ mensaje.message }}
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="row z-depth-5" >
+    <div class="col s10 m10 l10 inputMensaje">
+      <input type="text" class="textoEnviarMensaje" [(ngModel)]="nuevoMensaje" (keyup.enter)="enviarMensaje()" placeholder="mensaje?">
+    </div>
+    <div class="col s2 m2 l2 enviarMensaje z-depth-5">
+      <input class="botonEnviarMensaje " (click)="enviarMensaje()" value="Enviar!">
+    </div>
+  </div>
+</div>

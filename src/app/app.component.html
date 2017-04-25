@@ -1,15 +1,10 @@
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#" > {{title}}</a>
-    </div>
-    <div *ngIf="isLoggedIn" class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a (click)="logout()">Logout</a></li>
-      </ul>
+
+<navbar-app></navbar-app>
+<div>
+  <div class="row">
+    <div class="col s8 m8 l8 contenedorPrincipal"></div>
+    <div class="col s4 m4 l4 contenedorChat">
+      <router-outlet></router-outlet>
     </div>
   </div>
-</nav>
-<div class="app-content">
-  <router-outlet></router-outlet>
 </div>

@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {AngubaseService} from './providers/angubase.service';
+import {FirebaseService} from './providers/firebase.service';
 import {Router} from '@angular/router';
 
 @Component({
@@ -10,9 +10,8 @@ import {Router} from '@angular/router';
 export class AppComponent {
   public usuarioEstaLogueado: boolean;
 
-  title = 'Avestruz!';
 
-  constructor(public _abService: AngubaseService, private _router: Router) {
+  constructor(public _abService: FirebaseService, private _router: Router) {
 
     // Con esto se comprueba asíncronamente si el usuario está logeado
     // y es redirigido a la página de logueo si la stuación cambia
@@ -27,6 +26,8 @@ export class AppComponent {
 
         } else {
           this.usuarioEstaLogueado = true;
+          this._abService.nickname = auth.google.displayName;
+          this._abService.email = auth.google.email;
           console.log('Usuario logueado');
           this._router.navigate(['']);
         }

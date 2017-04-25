@@ -1,0 +1,152 @@
+
+:root {
+  --acento: #fd7a50;
+  --acento2: #6efdb0;
+  --claro: #f0f0f0;
+  --claro2: #c7c7c7;
+  --oscuro: #222222;
+  --oscuro2: #434343;
+
+}
+
+.appChat{
+  background-color: #333;
+}
+
+.acento {
+  color: var(--acento)
+}
+
+.acento2 {
+  color: var(--acento2)
+}
+
+.claro {
+  color: var(--claro)
+}
+.claro2 {
+  color: var(--claro2)
+}
+
+* {
+  color: var(--claro);
+  font-family: Verdana, fantasy;
+}
+
+.contenedorChat{
+  height: 500px;
+  z-index: 1000000;
+  overflow-y: scroll;
+
+}
+
+.columnaAutor{
+  padding:4px;
+
+}
+
+.columnaMensaje{
+  padding:0;
+  margin:0;
+}
+
+.mensaje{
+  color: #c7c7c7 ;
+  min-height: 40px;
+}
+.autor{
+  font-size: 12px;
+  padding: 0;
+  margin: 0;
+  color: #eeeeee;
+  text-align: right;
+
+
+}
+
+.propioAutor{
+  font-size: 12px;
+  padding: 0;
+  margin: 0;
+  color: #8f88b7;
+  text-align: right;
+
+
+}
+
+.horaMensaje{
+  font-size: 9px;
+  padding: 0;
+  margin: 0;
+  color: #eeeeee;
+  text-align: right;
+}
+
+.row{
+  padding: 0;
+  margin: 0;
+}
+
+.par{
+  background-color: #414142;
+}
+
+.impar{
+  background-color: #4a494a;
+}
+
+
+.par{
+  background-color: #414142;
+  transition-duration: .25s;
+
+}
+
+.impar{
+  background-color: #4a494a;
+  transition-duration: .25s;
+
+}
+
+.par:hover{
+  background-color: #234240;
+
+}
+
+.impar:hover{
+  background-color: #234240;
+}
+
+
+.enviarMensaje{
+  padding: 0px;
+  margin: 0;
+  height: 50px;
+
+}
+.botonEnviarMensaje{
+  border-radius: 0px;
+  height: 100%;
+  padding-right: 10px;
+  background-color: #666666;
+  text-align: center;
+  cursor: pointer;
+
+}
+
+.textoEnviarMensaje{
+  color: #eeeeee;
+  padding-left: 5px;
+
+}
+
+.inputMensaje{
+  padding-left: 5px;
+  margin: 0;
+  height: 50px;
+}
+
+.textoEnviarMensaje:focus:not([readonly]){
+  border-bottom: 1px solid #be91df;
+  box-shadow: 0 1px 0 0 #be91df;
+}
