@@ -1,4 +1,4 @@
-<div class="appChat z-depth-5">
+<div class="appChat z-depth-3">
   <div #scrollMensaje class="contenedorChat" id="mensajes">
     <ul>
       <li *ngFor="let mensaje of mensajes | async; let index = index" class="">
@@ -20,7 +20,7 @@
   </div>
   <div class="row z-depth-5" >
     <div class="col s10 m10 l10 inputMensaje">
-      <input type="text" class="textoEnviarMensaje" [(ngModel)]="nuevoMensaje" (keyup.enter)="enviarMensaje()" placeholder="mensaje?">
+      <textarea wrap="hard" cols="30" class="textoEnviarMensaje" [(ngModel)]="nuevoMensaje" (keyup.enter)="enviarMensaje()" placeholder="mensaje?"></textarea>
     </div>
     <div class="col s2 m2 l2 enviarMensaje z-depth-5">
       <input class="botonEnviarMensaje " (click)="enviarMensaje()" value="Enviar!">

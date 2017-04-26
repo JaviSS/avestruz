@@ -53,9 +53,10 @@
 .mensaje{
   color: #c7c7c7 ;
   min-height: 40px;
+  font-size: 10px;
 }
 .autor{
-  font-size: 12px;
+  font-size: 8px;
   padding: 0;
   margin: 0;
   color: #eeeeee;
@@ -65,7 +66,7 @@
 }
 
 .propioAutor{
-  font-size: 12px;
+  font-size: 8px;
   padding: 0;
   margin: 0;
   color: #8f88b7;
@@ -75,7 +76,7 @@
 }
 
 .horaMensaje{
-  font-size: 9px;
+  font-size: 6px;
   padding: 0;
   margin: 0;
   color: #eeeeee;
@@ -125,6 +126,7 @@
 
 }
 .botonEnviarMensaje{
+  color: #eeeeee;
   border-radius: 0px;
   height: 100%;
   padding-right: 10px;
@@ -137,8 +139,18 @@
 .textoEnviarMensaje{
   color: #eeeeee;
   padding-left: 5px;
+  resize: none;
+  border: 0px;
+  font-size: 12px;
 
 }
+
+
+.textoEnviarMensaje:focus{
+outline-style: none;
+
+}
+
 
 .inputMensaje{
   padding-left: 5px;

@@ -9,6 +9,7 @@ import {RouterModule, Routes} from '@angular/router';
 import { ChatComponent } from './chat-app/chat.component';
 import {FormsModule} from "@angular/forms";
 import { NavbarAppComponent } from './navbar-app/navbar-app.component';
+import { PanelUsuarioComponent } from './panel-usuario/panel-usuario.component';
 
 
 export const firebaseConfig = {
@@ -27,7 +28,7 @@ const routes: Routes = [
 
 
 @NgModule({
-  declarations: [AppComponent, PaginaLoginComponente, ChatComponent, NavbarAppComponent],
+  declarations: [AppComponent, PaginaLoginComponente, ChatComponent, NavbarAppComponent, PanelUsuarioComponent],
   imports: [AlertModule.forRoot(), BrowserModule,
     AngularFireModule.initializeApp(firebaseConfig),
     RouterModule.forRoot(routes), FormsModule],
