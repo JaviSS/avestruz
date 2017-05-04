@@ -21,16 +21,11 @@
   font-family: Verdana, fantasy;
 }
 
-body {
-  background-size: 100%;
-  background: linear-gradient(to bottom, #333333, #333333) no-repeat fixed;
-  height: 100%; margin: 0; padding: 0;
-}
-
 
 .contenedorChat{
   margin: 0px;
   padding: 0px;
+  height: 700px;
 }
 
 .row{
@@ -40,10 +35,10 @@ body {
 
 .contenedorPrincipal{
   background-color: #4a494a;
-  height: 550px;
+  height: 700px;
 }
 
 .contenedorPanelUsuario{
   background-color: #fd7a50;
-  height: 550px;
+  height: 700px;
 }
